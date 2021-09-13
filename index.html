@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Palette Generator</title>
+</head>
+<body>
+    <div class='saveForm hidden'>
+        <span ><button id='xSave'>X</button></span>
+        <label for="name">Name your Color Palette</label> 
+        
+        
+        <input type="name" name="name" id="name"></input>
+        
+        <input id='submitSave'type="submit" value="Submit"></input>
+    </div>
+    <div class="colors">
+        <div class="color one">
+            <h1>Hex 1</h1>
+            <div class="colorBtn">
+                <button class="edit">
+                    <i class="fas fa-solid fa-sliders-h"></i>
+                </button>
+                <button class='lock' data-lock='False'>
+                    <i class="fas fa-solid fa-lock-open open"></i>
+                </button>
+            </div>
+            <div class="hslControl " data-control='0'>
+                <span><button class='x'>X</button></span>
+                <label for="hue">Hue</label>
+                <input type="range"    class="sliders hue-input" name="hue" min='0' max='360' step='1' id="hue"    data-hue = '0'>
+                <label for="sat">Saturation</label>
+                <input type="range"  class="sliders sat-input" name="sat" min='0' max='1' step='0.01' id="sat"   data-sat = '0'>
+                <label for="bri">Brightness</label>
+                <input type="range"   class="sliders bri-input" name="bri" id="bri" min='0' max='1' step='0.01' data-bri = '0'>
+
+            </div>
+            
+        </div>
+        <div class="color two">
+            <h1>Hex 2</h1>
+            <div class="colorBtn">
+                <button class="edit">
+                    <i class="fas fa-solid fa-sliders-h"></i>
+                </button>
+                <button class='lock' data-lock='False'>
+                    <i class="fas fa-solid fa-lock-open open"></i>
+                </button>
+            </div>
+            <div class="hslControl " data-control='1'>
+                <span><button class='x'>X</button></span>
+                <label for="hue">Hue</label>
+                <input type="range"  class="sliders hue-input" name="hue" min='0' max='360' step='1' id="hue"   data-hue = '1'>
+                <label for="sat">Saturation</label>
+                <input type="range" class="sliders sat-input" name="sat" min='0' max='1' step='0.01' id="sat"   data-sat = '1'>
+                <label for="bri">Brightness</label>
+                <input type="range" class="sliders bri-input" name="bri" id="bri" min='0' max='1' step='0.01' data-bri = '1'>
+
+            </div>
+            
+        </div>
+        <div class="color three">
+            <h1>Hex 3</h1>
+            <div class="colorBtn">
+                <button class="edit">
+                    <i class="fas fa-solid fa-sliders-h"></i>
+                </button>
+                <button class='lock' data-lock='False'>
+                    <i class="fas fa-solid fa-lock-open open"></i>
+                </button>
+            </div>
+            <div class="hslControl " data-control='2'>
+                <span><button class='x'>X</button></span>
+                <label for="hue">Hue</label>
+                <input type="range"  class="sliders hue-input" name="hue" min='0' max='360' step='1' id="hue"   data-hue = '2'>
+                <label for="sat">Saturation</label>
+                <input type="range"  class="sliders sat-input" name="sat" min='0' max='1' step='0.01' id="sat"   data-sat = '2'>
+                <label for="bri">Brightness</label>
+                <input type="range"class="sliders bri-input" name="bri" id="bri" min='0' max='1' step='0.01' data-bri = '2'>
+
+            </div> 
+        </div>
+        <div class="color four">
+            <h1>Hex 4</h1>
+            <div class="colorBtn">
+                <button class="edit">
+                    <i class="fas fa-solid fa-sliders-h"></i>
+                </button>
+                <button class='lock' data-lock='False'>
+                    <i class="fas fa-solid fa-lock-open open"></i>
+                </button>
+            </div>
+            <div class="hslControl " data-control='3'>
+                <span><button class='x'>X</button></span>
+                <label for="hue">Hue</label>
+                <input type="range"  class="sliders hue-input" name="hue" min='0' max='360' step='1' id="hue"   data-hue = '3'>
+                <label for="sat">Saturation</label>
+                <input type="range"  class="sliders sat-input" name="sat" min='0' max='1' step='0.01' id="sat"   data-sat = '3'>
+                <label for="bri">Brightness</label>
+                <input type="range"  class="sliders bri-input" name="bri" id="bri" min='0' max='1' step='0.01' data-bri = '3'>
+
+            </div>
+        </div>
+        <div class="color five">
+            <h1>Hex5</h1>
+            <div class="colorBtn">
+                <button class="edit">
+                    <i class="fas fa-solid fa-sliders-h"></i>
+                </button>
+                <button class='lock' data-lock='False'>
+                    <i class="fas fa-solid fa-lock-open open"></i>
+                </button>
+            </div>
+            <div class="hslControl " data-control='4'>
+                <span><button class='x'>X</button></span>
+                <label for="hue">Hue</label>
+                <input type="range"  class="sliders hue-input" name="hue" min='0' max='360' step='1' id="hue"   data-hue = '4'>
+                <label for="sat">Saturation</label>
+                <input type="range"  class="sliders sat-input" name="sat" min='0' max='1' step='0.01' id="sat"   data-sat = '4'>
+                <label for="bri">Brightness</label>
+                <input type="range"  class="sliders bri-input" name="bri" id="bri" min='0' max='1' step='0.01' data-bri = '4'>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        
+        <div>
+            <button id ='library'>
+                <i class="fas fa-book"></i>
+            </button>
+            <h3>Library</h3>
+        </div>
+        <div>
+            <button id="generate">
+                <i class="fas fa-solid fa-sync-alt"></i>
+            </button> 
+            <h3>Generate</h3>
+        </div>
+        <div>
+            <button id ='save'>
+             <i class="fas fa-solid fa-bookmark"></i>
+            </button>
+            <h3>Save</h3>
+        </div>
+    </div>
+    <div class="copyMssg hidden">🎨 
+        <span id='copyColor'></span> 
+        </br> Copied to Clipboard !
+    </div>
+    <div class="libraryMain hidden">
+        <button class='xLibrary'><h2>X</h2></button>
+        <h2>Your Saved Palettes</h2>
+        <div class='libraryContainer '>
+            
+         
+       
+
+        
+        
+        </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.5/chroma.min.js"  ></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
